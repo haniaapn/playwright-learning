@@ -1,4 +1,5 @@
 import { Page, Locator } from '@playwright/test';
+import { ENV } from '../config/env';
 
 export class LoginPage {
   readonly page: Page;
@@ -18,8 +19,8 @@ export class LoginPage {
   }
 
   async goto(): Promise<void> {
-    await this.page.goto('https://practicetestautomation.com/practice-test-login/');
-  }
+  await this.page.goto(`${ENV.baseUrl}/practice-test-login/`);
+}
 
   async login(username: string, password: string): Promise<void> {
     await this.username.fill(username);
