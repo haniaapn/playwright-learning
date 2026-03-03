@@ -1,6 +1,6 @@
 # Playwright Automation Framework
 
-Enterprise-grade QA Automation Framework using Playwright + TypeScript
+QA Automation Framework using Playwright + TypeScript
 
 ## Features
 - TypeScript-based framework
