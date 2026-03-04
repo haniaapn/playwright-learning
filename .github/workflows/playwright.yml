@@ -27,6 +27,9 @@ jobs:
 
       - name: Run Playwright tests
         run: npx playwright test
+        env:
+          BOOKCART_USERNAME: ${{ secrets.BOOKCART_USERNAME }}
+          BOOKCART_PASSWORD: ${{ secrets.BOOKCART_PASSWORD }}
 
       - name: Upload HTML Report
         uses: actions/upload-artifact@v4
