@@ -4,7 +4,7 @@ import { CartPage } from '../../src/pages/cart.page';
 import books from '../../src/data/books.mock.json';
 import { mockBooksAPI } from '../../src/utils/api-mocks';
 
-test.describe('Day 12 - API Mocking Cart Flow', () => {
+test.describe('API Mocking Cart Flow', () => {
 
   test('User can see mocked books and add product to cart', async ({ page }) => {
 
