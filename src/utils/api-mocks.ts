@@ -12,34 +12,3 @@ export async function mockBooksAPI(page: Page) {
     });
   });
 }
-
-export async function mockAddToCartAPI(page: Page) {
-  await page.route('**/api/shoppingcart/add**', async route => {
-    await route.fulfill({
-      status: 200,
-      contentType: 'application/json',
-      body: JSON.stringify({
-        success: true
-      })
-    });
-  });
-}
-
-export async function mockCartAPI(page: Page) {
-  await page.route('**/api/shoppingcart/**', async route => {
-    await route.fulfill({
-      status: 200,
-      contentType: 'application/json',
-      body: JSON.stringify({
-        items: [
-          {
-            bookId: 1,
-            title: "Playwright Automation Guide",
-            quantity: 1,
-            price: 25
-          }
-        ]
-      })
-    });
-  });
-}
