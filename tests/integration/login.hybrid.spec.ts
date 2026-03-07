@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { loginAPI } from '../../src/api/auth.api';
-import { ENV } from '../../config/env';
+import { ENV } from '../../src/config/env';
 
 test.describe('Hybrid Login Validation', () => {
 
